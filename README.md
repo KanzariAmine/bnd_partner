@@ -12,7 +12,7 @@
 #### Step 1: Clone the repo
 
 ```sh
-$ git clone https://github.com/KanzariAmine/NodeJS-Authentication-JWT.git
+$ git clone https://github.com/KanzariAmine/bnd_partner.git
 ```
 #### Step 2: Install the dependencies
 
