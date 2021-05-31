@@ -36,3 +36,9 @@ $ redis-server
 ```sh
 $ bnd_partners/backend
 $ yarn dev
+```
+#### Note:
+```sh
+Email: admin@test.com
+Password:123456
+```
