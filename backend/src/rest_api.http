@@ -1,0 +1,72 @@
+
+GET http://localhost:8585/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjI0MTc5NzYsImV4cCI6MTYyMjQyMTU3NiwiYXVkIjoiNjBiM2ZiZDM3M2JiMzQxN2ZjMmFkNjI1In0.8dvrs0J2oRtdkRTQyOBF6VZtHmYnn5akA7bqtF8kW1A
+
+
+### Post Register user
+POST  http://localhost:8585/user/register
+Content-Type: application/json
+
+{
+  "email": "client@test.com",
+  "password": "123456"
+}
+### Login
+POST http://localhost:8585/user/login
+Content-Type: application/json
+
+{
+  "email": "admin@test.com",
+  "password": "123456"
+}
+
+###refresh-token route
+POST http://localhost:8585/user/refresh-token
+Content-Type: application/json
+
+{
+	"refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjI0MTg5NTIsImV4cCI6MTY1Mzk3NjU1MiwiYXVkIjoiNjBiNDI0ZTcxN2UyOWMyMjYxNWRhY2Y4In0.DbFLgwm2TWQSAjE9jb_4MkOn0Q4klBTxEn5qHjw1qCI"
+}
+
+###logout route
+DELETE http://localhost:8585/user/logout
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjI0MTk1NjEsImV4cCI6MTY1Mzk3NzE2MSwiYXVkIjoiNjBiNDI0ZTcxN2UyOWMyMjYxNWRhY2Y4In0.UaOzkfRX9ur5o1hJDcBrlGW_7lEEkdF9pbMxu4hhql0"
+}
+
+############################# Products APi #########################################
+
+
+### Add Product
+POST  http://localhost:8585/product/add
+Content-Type: application/json
+ 
+{
+  "name": "Galaxy S20 FE 5G",
+  "productCode": "sam123phone",
+  "quantity": 359,
+  "price": 1000 ,
+  "brand": "Samsung",
+  "model": "S20 FE 5G",
+  "category": "Phone"
+}
+### Update Product
+POST  http://localhost:8585/product/update/60b444c4544ae73a08c6feda
+Content-Type: application/json
+ 
+{
+  "name": "Galaxy S20 FE 50G",
+  "productCode": "sam123phone",
+  "quantity": 359,
+  "price": 1000 ,
+  "brand": "Samsung",
+  "model": "S20 FE 5G",
+  "category": "Phone"
+}
+
+
+
+### Get All 
+GET http://localhost:8585/product
